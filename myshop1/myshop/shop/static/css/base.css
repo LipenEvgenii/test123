@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: darkgrey;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    background: beige;
+
+}
+.logo-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 400px;
+}
+.magasin{
+    color: brown;
+
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+
+}
+.nav-bar>li{
+    list-style: none;
+    padding-left: 20px;
+
+}
+a{
+    text-decoration: none;
+}
+.selected{
+    height: 20px;
+    background: #e8c70e;
+}
+.sidebar{
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+    background: bisque;
+     height: 50px;
+    margin: 10px;
+}
+.content{
+    height: 100vh;
+
+}
+.product-list{
+    border: 1px solid red;
+    background: #e3d9d9;
+    padding-left: 100px;
+}
+.item{
+    display: flex;
+    justify-content: space-evenly;
+    vertical-align: center;
+    border-radius: 5px;
+    background: aliceblue;
+    /* border: 1px solid red;*/
+    width: 400px;
+    height: 250px;
+    margin: 20px;
+}
+.item:hover{
+   color: white;
+    background: red;
+
+}
+.item-img{
+    width: 200px;
+    height: 200px;
+}
+.item-text{
+    width: 100px;
+    height: 100px;
+    /*background: burlywood;*/
+    /*border:  1px solid red;*/
+
+}
+.item-text>a{
+    color: red;
+    font-weight: bold;
+}
+.text-prev{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.btn-login{
+    width:60px;
+    height:20px;
+}
+
+.btn-registration{
+    width:90px;
+    height:20px;
+
+}
+
+.wrapper-btn{
+    display:flex;
+    width:200px;
+    align-items:center;
+    justify-content:space-around;
+    margin-left:30px;
+
+}

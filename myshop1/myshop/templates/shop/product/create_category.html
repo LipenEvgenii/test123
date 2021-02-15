@@ -1,0 +1,12 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}My shop{% endblock %}
+{% block content %}
+    <form action="{% url 'shop:category'%}  " method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+        {{ form}}
+
+    <button> Отправить</button>
+    </form>
+
+{% endblock %}
