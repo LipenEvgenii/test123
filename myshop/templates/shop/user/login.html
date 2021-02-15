@@ -1,0 +1,19 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}Вход{% endblock %}
+{% block content %}
+
+    <h2> Вход пользователя на сайт</h2>
+    {% if user.is_authenticated %}
+        <strong>Вы уже вошли</strong>
+    {% else %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form}}
+            <button>Войти</button>
+        </form>
+
+
+    {% endif%}
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My shop{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+<div class="header">
+
+    <a href="/" class="logo">
+        <img src="{% static 'img/logo.jpg' %}" alt="" class="logo-img">
+    </a>
+    <a href="/" class="logo">
+        <img src="{% static 'img/logo.jpg' %}" alt="" class="logo-img">
+    </a>
+    <h1 class="magasin">Мой интернет магазин</h1>
+ <div class="wrapper-btn">
+     {% if user.is_authenticated %}
+     <a href="{% url 'shop:logout'%}" >Выход</a>
+     {% else %}
+     <a href="{% url 'shop:login' %}" class="btn-login">Вход</a>
+     <a href="{% url 'shop:register' %}" class="btn-login">Регистрация</a>
+     {% endif %}
+<!--    <button class="btn-login">Вход</button>-->
+<!--    <button class="btn-registration">Регистрации</button>-->
+    </div>
+</div>
+<!--<form action="https://www.tut.by/" method="POST">-->
+<!--    <p><span> Введите логин: <input type= "text"></p>-->
+<!--    <p><span> Введите пароль: <input type= "password"></p>-->
+<!--    <p><span> Введите телефон: <input type= "tel"></p>-->
+<!--    <p><span> Введите email <input type= "email"></p>-->
+<!--    <p><span> Введите дата: <input type= "date"></p>-->
+<!--    <input type= "submit" value="отправить">-->
+<!--    <input type="reset" value="сброс">-->
+<!--</form>-->
+
+
+<div>
+    <a href="{% url 'shop:profile' %}"> Мои товары</a>
+
+</div>
+
+
+<div class="content">
+
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+
+</body>
+</html>
